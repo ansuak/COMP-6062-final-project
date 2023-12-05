@@ -1,0 +1,21 @@
+{
+    "volume":5,
+    "bluetooth": {
+        "device": [
+           {
+            "id": 1,
+            "name": "blueetooth-1"
+           },
+           {
+            "id": 2,
+            "name": "blueetooth-2"
+           },
+           {
+            "id": 3,
+            "name": "blueetooth-3"
+           }
+        ],
+        "connected": 1
+
+    }
+}

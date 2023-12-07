@@ -1,0 +1,53 @@
+{
+    "volume":5,
+    "bluetooth": {
+        "devices": [
+           {
+            "id": 1,
+            "name": "blueetooth-1"
+           },
+           {
+            "id": 2,
+            "name": "blueetooth-2"
+           },
+           {
+            "id": 3,
+            "name": "blueetooth-3"
+           },
+           {
+            "id": 4,
+            "name": "blueetooth-4"
+           }
+        ],
+        "connected": 1
+
+    },
+    "playlist": [
+        {
+            "id": 1,
+            "title": "Shape of You",
+            "artist": "Ed Sheeran"
+          },
+          {
+            "id": 2,
+            "title": "Dance Monkey",
+            "artist": "Tones and I"
+          },
+          {
+            "id": 3,
+            "title": "Blinding Lights",
+            "artist": "The Weeknd"
+          },
+          {
+            "id": 4,
+            "title": "Uptown Funk",
+            "artist": "Mark Ronson ft. Bruno Mars"
+          },
+          {
+            "id": 5,
+            "title": "Happier",
+            "artist": "Marshmello ft. Bastille"
+          }
+    ]
+    
+}

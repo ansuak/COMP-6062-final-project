@@ -9,6 +9,15 @@ function App() {
       console.log(response)
     })
   },[]);
+
+  // useEffect(() => {
+  //   axios.get('/api/volume')
+  //     .then((response) => {
+  //       console.log({response});
+  //     });
+
+  //   console.log('Execution continuing...');
+  // }, []);
   return (
     <>
      <div>

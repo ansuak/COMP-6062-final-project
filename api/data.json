@@ -1,0 +1,58 @@
+{
+    "volume":5,
+    "bluetooth": {
+        "devices": [
+           {
+            "id": 1,
+            "name": "blueetooth-1"
+           },
+           {
+            "id": 2,
+            "name": "blueetooth-2"
+           },
+           {
+            "id": 3,
+            "name": "blueetooth-3"
+           },
+           {
+            "id": 4,
+            "name": "blueetooth-4"
+           }
+        ],
+        "connected": 1
+
+    },
+    "playlist": [
+        {
+            "id": 1,
+            "title": "Shape of You",
+            "artist": "Ed Sheeran",
+            "albumArt": "https://www.thebroadwaybarking.com/Sales/Images/Image.ashx?ImageId=315f882a-fd3f-ee11-ba57-0210bc7314a7&TargetWidth=426&TargetHeight="
+          },
+          {
+            "id": 2,
+            "title": "Dance Monkey",
+            "artist": "Tones and I",
+            "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6f7af36ecdc3ed6e0a1f169"
+          },
+          {
+            "id": 3,
+            "title": "Blinding Lights",
+            "artist": "The Weeknd",
+            "albumArt": "https://i.ytimg.com/vi/x3HqwCGhGeA/sddefault.jpg"
+          },
+          {
+            "id": 4,
+            "title": "Uptown Funk",
+            "artist": "Mark Ronson ft. Bruno Mars",
+            "albumArt":"https://i1.sndcdn.com/artworks-000126730146-82o2xn-t500x500.jpg"
+          },
+          {
+            "id": 5,
+            "title": "Happier",
+            "artist": "Marshmello ft. Bastille",
+            "albumArt":"https://upload.wikimedia.org/wikipedia/en/e/e5/Marshmello_and_Bastille_Happier.png"
+          }
+    ]
+    
+}

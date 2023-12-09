@@ -7,24 +7,8 @@ const path = 'data.json';
 //Middleware to parse JSON req. body
 app.use(express.json());
 
-// function readJsonFile(filePath){
-//   try {
-//     fsp.readFile(filePath)
-//     .then((data) => {
-//     const json = JSON.parse(data);
-//     return json;
-//   })
-//   }
-//   catch(err) {
-//     console.error('Error reading JSON file:', err);
-//   }
-// }
-
 app.get('/api', (req, res) => {
- 
-  // const data = readJsonFile(path);
-  // console.log(data);
-  // res.send(data);
+
   res.send("Hello World");
 });
 
@@ -80,7 +64,7 @@ app.get('/api/bluetooth/connected', (req, res, next) => {
   .then((data) => {
     const json = JSON.parse(data);
     res.send({
-      "connected device id": json.bluetooth.connected });
+      connected: json.bluetooth.connected });
   })
   .catch((err) => {
     console.error(err);
@@ -99,7 +83,7 @@ app.put('/api/bluetooth/connected', (req, res, next) => {
         json.bluetooth.connected = reqId;
         fsp.writeFile('data.json', JSON.stringify(json))
         .then(() => {
-          res.send({ connected: Number(req.body.connected) });
+          res.send({ newdevice: json.bluetooth.devices.find(device => device.id === reqId) });
         })
         .catch((err) => {
           console.error(err);
@@ -116,32 +100,18 @@ app.put('/api/bluetooth/connected', (req, res, next) => {
       });
 });
 
-// Path params
-app.get('/api/songs/:id', (req, res) => {
-  res.send(req.params.id);
-  console.log(req.query);
-});
-
-//Use query string parameters to get the next song
-app.get('/api/playlist', (req, res, next) => {
-  const nextId = Number(req.query.id);
+//Use path parameters to get the next song
+app.get('/api/playlist/:id', (req, res, next) => {
+  const nextId = Number(req.params.id);
   fsp.readFile('data.json')
     .then((data) => {
       const json = JSON.parse(data);
-      let songs = json.playlist;1
+      let songs = json.playlist;
       if(nextId > songs.length) {
         nextId = 1;
       }
-      const foundItem = songs.find((item) => item.id === nextId);
-      if(foundItem == null)
-      {
-        res.send('Song not found');
-      }
-      const response = {
-        current_song_id: nextId,
-        song: foundItem
-      };
-      res.json(response);
+      //const foundItem = songs.find((song) => song.id === nextId);
+      res.send(songs.find((song) => song.id === nextId));
     })
     .catch((err) => {
       console.error(err);
